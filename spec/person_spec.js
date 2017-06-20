@@ -13,4 +13,14 @@ describe("Person", function() {
      expect(person.height).toEqual(186);
    });
 
+   it("should calculate and return a BMI-value", function() {
+     person.calculate_bmi();
+     expect(person.bmiValue).toEqual(26.01)
+   });
+
+   it("should also return a BMI Message", function(){
+     person.calculate_bmi();
+     expect(person.bmiMessage).toEqual("Overweight")
+   });
+
 });
